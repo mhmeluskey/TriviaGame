@@ -1,33 +1,25 @@
+//make timer
+//create variable for where the timer will start
+var startNumber = 60;
+//create variable to store interval of timer
+var intervalId;
 
-//timer
-setTimeout(fiveSeconds, 5000);
-setTimeout(tenSeconds, 10000);
-setTimeout(timeUp, 15000);
+//document.ready so that the timer will run
+$(document).ready(function() {
+  console.log("ready!");
+//create function that will run the interval
+  function run() {
+    intervalId = setInterval(decrement, 1000);
+} //end of run function
 
-// ---------------------
+//function that instructs the run function to decrease the interval
+function decrement () {
+startNumber--;
 
+$("#timer").html("<div> Time Remaining" + startNumber + "</div>");
 
+}; 
 
-function fiveSeconds() {
+run();
 
-  // in the element with an id of time-left add an h2 saying About 10 Seconds Left!
-  // console log 10 seconds left
-  $("#timer").html("<h2>About 10 Seconds Left!</h2>");
-  console.log("10 seconds left");
-  
-}
-
-
-function tenSeconds() {
-
-  // in the element with an id of time-left add an h2 saying About 5 Seconds Left!
-  // console log 5 seconds left
-  $("#timer").html("<h2>About 5 Seconds Left!");
-    console.log("5 Seconds left");
-}
-
-
-function timeUp() {
-  $("#timer").html("<h2>Time's Up!");
-    console.log("done");
-}
+}); //document.ready function 
