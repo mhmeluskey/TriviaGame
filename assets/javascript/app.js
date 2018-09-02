@@ -5,21 +5,42 @@ var startNumber = 60;
 var intervalId;
 
 //document.ready so that the timer will run
-$(document).ready(function() {
+$(document).ready(function () {
   console.log("ready!");
-//create function that will run the interval
+  //create function that will run the interval
   function run() {
     intervalId = setInterval(decrement, 1000);
-} //end of run function
+  }; //end of run function
 
-//function that instructs the run function to decrease the interval
-function decrement () {
-startNumber--;
+  function stop() {
+    clearInterval(intervalId);
+  }; //end of stop function
 
-$("#timer").html("<div> Time Remaining" + startNumber + "</div>");
+  //function that instructs the run function to decrease the interval
+  function decrement() {
+    startNumber--;
 
-}; 
+    $("#timer").html("<div> Time Remaining " + startNumber + "</div>");
+    if (startNumber === 0) {
+      $("#timer").html("<div> TIME IS UP!</div>");
+      stop();
+    } //end of if statement
 
-run();
+  }; //end of decrement function 
+
+  run();
+
+
+  function checkbox() {
+    if(document.getElementById('button').clicked == true) {
+      $()
+
+    }
+  }
+
+
+
+
+
 
 }); //document.ready function 
