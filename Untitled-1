@@ -1,44 +1,17 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Trivia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-
-
-</head>
-
-<body>
-
-    <h1>Totally Trivia Trivia</h1>
-    <br>
-    <div id="timer"> Time Remaining:</div>
-    <br>
-
-
-
-    <form name="quiz" method="post" name="buttons" id="quiz" onsubmit="return false">
-
-
-        <div class="question"> What year did Albert Einstein die?</div>
-        <input type="radio" name="q1" value="a"> 1954
-        <input type="radio" name="q1" value="b"> 1949
-        <input type="radio" name="q1" value="c"> 1955
-        <input type="radio" name="q1" value="d"> 1950
+!--        
+            <div class="question">Which is the largest planet in the solar system?</div> <br>
+        
+        <input class="correct" type="radio" name="question2" value="correct"> Jupiter
+        
+        <input class="wrong" type="radio" name="question2" value="wrong"> Neptune
+        
+        <input class="wrong" type="radio" name="question2" value="wrong"> Earth
+        
+        <input class="wrong" type="radio" name="question2" value="wrong"> Mars
+        
         <br>
-        <!--1955=answer-->
-        <div class="question">Which is the largest planet in the solar system?</div>
-        <input type="radio" name="q2" value="a"> Jupiter
-        <input type="radio" name="q2" value="b"> Neptune
-        <input type="radio" name="q2" value="c"> Earth
-        <input type="radio" name="q2" value="d"> Mars
-        <br>
+
         <!--Jupiter=answer-->
-
 
         
 
@@ -118,7 +91,10 @@
 
         <!-- November 22 1963=answer -->
         
-         <div class="question"> How many men have walked on the moon?</div> <br>
+            <div class="question"> How many men have walked on the moon?</div> <br>
+       
+
+
 
         <input class="wrong" type="radio" name="question8" value="wrong"> 10
         
@@ -129,16 +105,3 @@
         <input class="wrong" type="radio" name="question8" value="wrong"> 9
         <br>
         <br> -->
-
-
-        <input type=button onClick="location.href='results.html'" value='Submit'>
-
-    </form>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
-</body>
-
-</html>
